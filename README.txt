@@ -4,7 +4,7 @@ HAND CRICKET (aka ODD-EVEN)
 Hand cricket is a very popular game among school children in the Indian subcontinent.
 It is mostly played by two individuals, but in some variants two teams play against each other.
 
-Like most games played using hands, it uses different gestures of the hand do denote different number of runs. 
+Like most games played using hands, it uses different gestures of the hand to denote different number of runs.
 For more see the "How to Play" section.
 
 This is an interactive console variant of the game, made for both Turbo C++ and ANSI C++.
