@@ -14,12 +14,13 @@ void getch();
 void clrscr();
 
 void play();
-void display_help(){}
 char toss();
 int first_innings (char batsman);
-void end_innings (char &batsman, int runs_scored);
+void end_innings (char &batsman);
 int second_innings (char batsman, int target);
 void display_winner (char current_batsman, int runs_scored, int runs_chased);
+void display_help();
+void display_credits();
 
 int main() {
     // Main Menu
@@ -41,7 +42,7 @@ int main() {
                 display_help();
             break;
             case 3:
-                //display_credits();
+                display_credits();
             break;
             case 4:
                 // It will exit the loop
@@ -63,7 +64,7 @@ void play() {
     }
     cin.get();
     int runs_scored = first_innings(batsman);
-    end_innings(batsman, runs_scored);
+    end_innings(batsman);
     int runs_chased = second_innings(batsman, runs_scored+1);
     display_winner(batsman, runs_scored, runs_chased);
 }
@@ -145,7 +146,7 @@ int first_innings (char batsman) {
     return score;
 }
 
-void end_innings (char &batsman, int runs_scored) {
+void end_innings (char &batsman) {
    if (batsman == 'p') {
        cout << "\n\nThis ends the first innings. AI is the new batsman";
        batsman = 'a';
@@ -211,6 +212,26 @@ void display_winner (char current_batsman, int runs_scored, int runs_chased) {
             cout << "\n\n****** Congrats Player! You won the match by " << runs_scored - runs_chased << " runs! ******";
     }
     cin.get();
+}
+
+void display_help() {
+    clrscr();
+    cout << "\n\n*=*=HOW TO PLAY*=*=\n\n(assuming user knows how to play normal cricket)\n\n\n\n";
+    cout <<"* The \"Player\" refers to the human player, and \"AI\" refers to the BOT/CPU that throws numbers randomly.\n\n";
+    cout << "* For the toss, both the players select from 'odd' and 'even' and make throws; "
+         << "if the sum of these (i.e. their nos.) is odd/even, then the side having chosen that will bat first.\n\n";
+    cout << "* For the play, The batsman and the bowler make throws at every ball; if the throws are the same, "
+         << "the batsman is out, else the throw gets added to the batsman's runs.";
+    getch();
+}
+
+void display_credits() {
+    clrscr();
+    cout << "\n\n*=*=CREDITS*=*=\n\n";
+    cout << "Copyright (c) 2014 Jai Luthra, Shardul Aggarwal\n\n";
+    cout << "This game is licensed under MIT/X License.\nSee COPYING.txt file in the project root for details.";
+    cout << "\n\nJai Luthra\t\tShardul Aggarwal" << endl << "11-C\t\t\t11-C" << endl << "me@jailuthra.in";
+    getch();
 }
     
 void getch() {

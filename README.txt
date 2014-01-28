@@ -11,15 +11,23 @@ This is an interactive console variant of the game, made for both Turbo C++ and 
 This project is initiated as an end year compulsory CS project, by 11th class students (see "Authors") of Bal Bharati Public School, Pitampura.
 
 
-## How To Play
+How To Play
+-----------
+
+* The "Player" refers to the human player, and "AI" refers to the BOT/CPU that throws numbers randomly.
+* For the toss, both the players select from 'odd' and 'even' and make throws if the sum of these (i.e. their nos.) is odd/even, then the side having chosen that will bat first.
+* For the play, The batsman and the bowler make throws at every ball; if the throws are the same, the batsman is out, else the throw gets added to the batsman's runs.
 
 
-## Copying
+Copying
+-------
 
 This game, including all its components, can be reused and modified under the terms of MIT LICENSE. See the file COPYING.txt for details.
 It is hosted at https://github.com/jailuthra/hand-cricket for browsing and cloning.
 
-## Authors
+
+Authors
+-------
 
 Jai Luthra
   11-C
